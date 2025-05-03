@@ -1,0 +1,45 @@
+/* Body.css */
+
+/* Mobile view (max-width: 768px) */
+@media (max-width: 768px) {
+
+    /* Hide all navigation items on mobile */
+    .ant-menu-horizontal,
+    .ant-menu-vertical {
+        display: none;
+    }
+
+    /* Show the mobile hamburger button */
+    .menu-button {
+        display: block;
+    }
+
+    /* Drawer should be shown on mobile */
+    .ant-drawer {
+        display: block !important;
+    }
+
+    /* Ensure Drawer is open if it's triggered */
+    .ant-drawer-open {
+        display: block !important;
+    }
+}
+
+/* Desktop view (min-width: 769px) */
+@media (min-width: 769px) {
+
+    /* Hide the mobile hamburger menu button */
+    .menu-button {
+        display: none;
+    }
+
+    /* Display the desktop menu */
+    .ant-menu-horizontal {
+        display: flex;
+    }
+
+    /* Hide the drawer on larger screens */
+    .ant-drawer {
+        display: none !important;
+    }
+}

@@ -1,0 +1,168 @@
+/* Global Reset and Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-page-wrapper {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    background: #0a0a0a;
+    /* Darker shade for the header */
+    padding: 20px 0;
+    /* Increased padding for a more spacious look */
+    color: #ecf0f1;
+    /* Lighter text for better contrast */
+    border-bottom: 2px solid grey;
+    /* Blue border for visual pop */
+}
+
+.main-heading {
+    font-size: 42px;
+    /* Larger heading for more emphasis */
+    font-weight: 700;
+    /* Bold weight for the title */
+    color: #ecf0f1;
+    /* Light text color for the main heading */
+    margin-bottom: 15px;
+    /* Adjusted margin for more space */
+    letter-spacing: 2px;
+    /* Slight letter-spacing for a more modern feel */
+}
+
+.subheading {
+    font-size: 18px;
+    font-weight: 400;
+    /* Light font weight */
+    color: #bdc3c7;
+    /* Slightly darker gray for the subheading */
+    margin-top: 5px;
+    line-height: 1.6;
+    /* Improved line height for readability */
+    max-width: 600px;
+    /* Limit the width of the subheading for better alignment */
+    margin-left: auto;
+    margin-right: auto;
+    /* Center the subheading */
+}
+
+/* Adding hover effect to the header text */
+.header .main-heading:hover {
+    color: #2980b9;
+    /* Change color on hover for interaction */
+    cursor: pointer;
+    /* Indicate interactivity */
+}
+
+/* Additional Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 0;
+        /* Slightly reduced padding for mobile */
+    }
+
+    .main-heading {
+        font-size: 32px;
+        /* Slightly smaller for mobile */
+    }
+
+    .subheading {
+        font-size: 16px;
+        padding: 15px;
+        /* Smaller font size for mobile */
+    }
+}
+
+
+/* Main Content Container */
+.login-page-container {
+    min-height: calc(100vh - 150px);
+    /* Adjust height to avoid overlap with header */
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background: linear-gradient(to bottom, #87cefa, #f0f2f5);
+    /* Gradient background */
+}
+
+/* Left Map Section */
+.left-map-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.map-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-image {
+    max-width: 80%;
+    /* Restrict the width of the image */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    /* Light overlay for readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Enhance visibility with shadow */
+    padding: 10px;
+    /* Add padding around the image */
+}
+
+.map-image:hover {
+    transform: scale(1.05);
+}
+
+/* Right Form Section */
+.right-form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.9);
+    /* Semi-transparent card background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .login-page-container {
+        flex-direction: column;
+    }
+
+    /* .header {
+        padding: 10px;
+    } */
+
+    .map-container {
+        padding: 10px;
+    }
+
+    .map-image {
+        max-width: 100%;
+        /* Smaller image for mobile */
+    }
+
+    .auth-card {
+        margin-top: 20px;
+    }
+}
