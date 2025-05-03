@@ -2,7 +2,7 @@
 
 **Overview :**
 
-Implement a Simple Hotel Lister web applicaton where a authenticated user can search for hotels list by city name and also filtered the results via hotel rating and pool feature.Technology used for frontend is React.js and for backend Django restframework with Django orm sqlite3 database.
+Implement a Simple Hotel Lister web applicaton where a authenticated user can search for hotels list by city name and also filtered the results via hotel rating and pool feature.Technology used for frontend are React.js, Redux, Ant-design and for backend Django restframework with Django orm sqlite3 database.
 
 **Set Up Project:**
 
@@ -28,4 +28,9 @@ Frontend:
 
 Note : In my pc the running url is : http://localhost:3000/
 
+**Data Used :**
+I am using the option B. From this site "https://data.xotelo.com/api/list?location_key={location_key}"(Xotelo hotel api) . They are provided multiple city hotel data like name,rating,price,accomodation type etc.Using this api in my code and utilize the data as per instruction.
+
+**AI tools :**
+I am using Chatgpt for design the frontend structure and fixing the error by generating some boilerplate code by it.
 
