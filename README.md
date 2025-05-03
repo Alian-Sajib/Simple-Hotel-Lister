@@ -2,7 +2,7 @@
 
 **Overview :**
 
-Implement a Simple Hotel Lister web applicaton where a authenticated user can search for hotels list by city name and also filtered the results via hotel rating and pool feature.Technology used for frontend are React.js, Redux, Ant-design and for backend Django restframework with Django orm sqlite3 database.
+Implement a Simple Hotel Lister web applicaton where a authenticated user can search for hotels list by city name and also filtered the results via hotel rating and pool feature.Also adding feature like bookmark option, dark mode theme. Technology used for frontend are React.js, Redux, Ant-design and for backend Django restframework with Django orm sqlite3 database.
 
 **Set Up Project:**
 
