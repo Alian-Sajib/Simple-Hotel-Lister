@@ -8,6 +8,7 @@ from .models import SavedHotels
 from .serializers import SavedHotelSerializer
 
 
+# Using proxy_hotel_data to fix CORS issue in frontend
 @api_view(["GET"])
 def proxy_hotel_data(request):
     location_key = request.GET.get("location_key")
@@ -30,6 +31,7 @@ class SavedHotelViewSet(viewsets.ModelViewSet):
     serializer_class = SavedHotelSerializer
     permission_classes = [permissions.IsAuthenticated]
 
+    # Filters the hotels so each user only sees their own saved hotels.
     def get_queryset(self):
         return SavedHotels.objects.filter(user=self.request.user)
 
