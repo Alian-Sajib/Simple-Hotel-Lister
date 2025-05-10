@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { DeleteOutlined } from '@ant-design/icons';
+import { Url } from '../../redux/actionTypes';
 
 const { Title, Paragraph } = Typography;
 
@@ -15,11 +16,12 @@ const SavedHotels = ({ darkMode }) => {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
+
     useEffect(() => {
         const fetchSavedHotels = async () => {
             setLoading(true);
             try {
-                const res = await axios.get("http://127.0.0.1:8000/api/savedhotels/", {
+                const res = await axios.get(Url + `/api/savedhotels/`, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -37,7 +39,7 @@ const SavedHotels = ({ darkMode }) => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://127.0.0.1:8000/api/savedhotels/${id}/`, {
+            await axios.delete(Url + `/api/savedhotels/${id}/`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

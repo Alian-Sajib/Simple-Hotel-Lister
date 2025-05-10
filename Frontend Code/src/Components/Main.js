@@ -11,7 +11,7 @@ const Main = () => {
     const token = useSelector(state => state.token);
     const dispatch = useDispatch();
 
-    // 🔄 Global dark mode state
+    // Global dark mode state
     const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() => {

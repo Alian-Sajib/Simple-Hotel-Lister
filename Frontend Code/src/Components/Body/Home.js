@@ -20,6 +20,7 @@ import {
 import { BulbOutlined, BulbFilled, BookOutlined, BookFilled } from '@ant-design/icons';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
+import { Url } from '../../redux/actionTypes';
 
 const { Title, Paragraph, Text } = Typography;
 const { Option } = Select;
@@ -31,6 +32,7 @@ const location_key = {
     "las vegas": "g45963",
     "philadelphia": "g60795",
 };
+
 
 const HomePage = ({ darkMode, setDarkMode }) => {
     const navigate = useNavigate();
@@ -46,7 +48,7 @@ const HomePage = ({ darkMode, setDarkMode }) => {
 
     const fetchBookmarks = async () => {
         try {
-            const res = await axios.get("http://127.0.0.1:8000/api/savedhotels/", {
+            const res = await axios.get(Url + `/api/savedhotels/`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -65,7 +67,7 @@ const HomePage = ({ darkMode, setDarkMode }) => {
         const found = bookmarkedHotels.find(h => h.hotel_name === hotel.name);
         if (found) {
             try {
-                await axios.delete(`http://127.0.0.1:8000/api/savedhotels/${found.id}/`, {
+                await axios.delete(Url + `/api/savedhotels/${found.id}/`, {
                     headers: { Authorization: ` Bearer ${token}` }
                 });
                 message.success("Removed from saved hotels");
@@ -85,7 +87,7 @@ const HomePage = ({ darkMode, setDarkMode }) => {
             };
 
             try {
-                await axios.post("http://127.0.0.1:8000/api/savedhotels/", payload, {
+                await axios.post(Url + `/api/savedhotels/`, payload, {
                     headers: { Authorization: `Bearer ${token} ` }
                 });
                 message.success("Hotel saved!");
@@ -109,7 +111,7 @@ const HomePage = ({ darkMode, setDarkMode }) => {
 
         setLoading(true);
         try {
-            const response = await axios.get(`http://127.0.0.1:8000/api/hotels/?location_key=${locKey}`, {
+            const response = await axios.get(Url + `/api/hotels/?location_key=${locKey}`, {
                 headers: { Authorization: `Bearer ${token} ` }
             });
 
