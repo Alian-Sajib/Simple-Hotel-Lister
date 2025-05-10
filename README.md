@@ -13,8 +13,8 @@ Backend :
 4. Now Create 2 app named authentication and hotels in project folder using command=>  py manage.py startapp appname
 5. Replace the admin.py,urls.py,models.py,views.py,serializers.py file from my github repo in both app.
 6. From main project folder replace the settings.py and urls.py in your project.
-7. Run migration by this command=>  py manage.py makemigrations
-   
+7. Run migration by this command=>
+                                    py manage.py makemigrations
                                     py manage.py migrate
    
 8.Now run the server localy in your machine with this=>  py manage.py runserver
